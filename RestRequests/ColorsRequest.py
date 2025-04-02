@@ -1,12 +1,10 @@
 import requests as rq
 from pandas import DataFrame as df
 
-# TODO: Cache the color list from the requested API
 class ColorsRequest:
     __formattedColorsDF: df
     def __init__(self):
         self.urlBase: str = 'https://www.csscolorsapi.com/'
-        #self.__formattedColors = {}
 
     def requestColors(self): 
         try:
@@ -15,7 +13,6 @@ class ColorsRequest:
             if (request.status_code != 200):
                 return None
         
-            #print("the Json: ", request.json())
             json = request.json()
             self.setFormattedColorsDF(json["colors"])
 
@@ -40,7 +37,6 @@ class ColorsRequest:
             rgb = str(i['rgb']).split(',')
 
             color["name"] = str(i['name'])
-            #color["rgb"] = str(i["rgb"])
             color["r"] = int(rgb[0])
             color["g"] = int(rgb[1])
             color["b"] = int(rgb[2])
@@ -48,13 +44,10 @@ class ColorsRequest:
 
             formattedColorList.append(color)
 
-        colors = df(formattedColorList)
-        #colors.set_index("rgb", inplace=True)
-
-        self.__formattedColorsDF = colors
+        self.__formattedColorsDF = df(formattedColorList)
 
     '''
     returns: The colors as DF
     '''
-    def getColorsDF(self) -> df:
+    def getFormattedColorsDF(self) -> df:
         return self.__formattedColorsDF
