@@ -34,6 +34,7 @@ class ColorsRequest:
 
         for i in _colorsListFromAPI:
             color = {}
+
             rgb = str(i['rgb']).split(',')
 
             color["name"] = str(i['name'])

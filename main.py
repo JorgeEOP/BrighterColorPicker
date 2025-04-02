@@ -21,7 +21,7 @@ if __name__ == "__main__":
         brightestColor: list[int] = picker.getBrightestsColor(colorsAsDecimal)
     except NameError:
         raise NameError('Error transforming RGB to Decimal!\n')
-
+    
     # make REST request
     colorsAPI = cr()
     colorsAPI.requestColors()

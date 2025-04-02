@@ -25,7 +25,7 @@ class ColorPicker():
         for i in _colorsInDecimalFormat:
             br = math.sqrt( 0.241* i[0]**2 + 0.691 * i[1]**2 + 0.068 * i[2]**2 )
             br = round(br, 4)
-            if (br > brightness):
+            if (br >= brightness):
                 brightness = br
                 color = [i[0], i[1], i[2]]
 
