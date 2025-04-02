@@ -1,6 +1,15 @@
 # BrighterColorPicker
 
+To use the ColorPicker simply clone the code and run
+```
+python3 main.py
+```
+
+You need to have the libraries *pandas* and *request* in oprder for the code to work
+
 ## Test
+To select any of the tests, only comment and uncomment the lines in the main.py
+file (lines 14, 15, 16)
 
 ### Test1
 For this tests we use the Proposed list:

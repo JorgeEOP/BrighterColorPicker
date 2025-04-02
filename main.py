@@ -11,12 +11,12 @@ if __name__ == "__main__":
         compare the brightest Color found to data
     '''
 
-    #test1 = ["#AABBCC", "#154331", "#A0B1C2", "#000000", "#FFFFFF"]
-    test2 = ['#6495ED', '#7FFF00', '#B8860B']
-    #test3 = ["#AABBCC", "#154331", "#A0B1C2", "#000000"]
+    #test = ["#AABBCC", "#154331", "#A0B1C2", "#000000", "#FFFFFF"]
+    test = ['#6495ED', '#7FFF00', '#B8860B']
+    #test = ["#AABBCC", "#154331", "#A0B1C2", "#000000"]
 
     try:
-        picker = cp(test2)
+        picker = cp(test)
         colorsAsDecimal = picker.transformRGBToDecimal()
         brightestColor: list[int] = picker.getBrightestsColor(colorsAsDecimal)
     except NameError:
