@@ -1,7 +1,6 @@
 # BrighterColorPicker
 
 ## Test
-For Testing I have used some random colors from the external API
 
 ### Test1
 For this tests we use the Proposed list:
@@ -15,6 +14,7 @@ The brightest color is: #FFFFFF (r=255, g=255, b=255) called White
 
 
 ### Test2
+For the following tests I have used some random colors from the external API
 
 ```
 
@@ -40,7 +40,7 @@ Brightness: 220.95104435145808
 Brightness: 143.44030117090523
 ```
 
-In this case, the brightest color should be Chartreuse. This should be thrown by the code
+In this case, the brightest color should be Chartreuse. This should be thrown by the code.
 The code shows the correct result:
 
 ```
