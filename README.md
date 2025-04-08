@@ -63,3 +63,13 @@ then the code throws the message:
 ```
 The color with maximum brightness (RGB: [170, 187, 204]) can not be found in External API
 ```
+
+## Automatic Tests
+To run a series of Tests, go into the folder Tests/
+Then type the following command:
+```
+pytest -v test_request.py
+```
+
+This will run the defined tests and report if there is an error in the execution of
+the script
