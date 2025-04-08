@@ -16,7 +16,6 @@ class ColorPicker():
 
         return colorsAsDecimal
     
-    #Complexity: O(n)?
     def getBrightestsColor(self, _colorsInDecimalFormat: list[tuple[int, int, int]]) -> list[int] :
         #According to brightness definition, brightness >= 0
         brightness: float = 0
