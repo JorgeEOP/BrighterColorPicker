@@ -68,7 +68,7 @@ The color with maximum brightness (RGB: [170, 187, 204]) can not be found in Ext
 To run a series of Tests, go into the folder Tests/
 Then type the following command:
 ```
-pytest -v test_request.py
+pytest -v testColorPicker.py
 ```
 
 This will run the defined tests and report if there is an error in the execution of
