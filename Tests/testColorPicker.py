@@ -49,4 +49,29 @@ def testGetBrightestColor_NotInAPI():
                                                                                     colorInfo[1],
                                                                                     colorInfo[2],
                                                                                     colorInfo[3],
-                                                                                    colorInfo[0] )
+                                                                                    colorInfo[0])
+def testBrightestColorIsWhite():
+    test = ["#AABBCC", "#154331", "#A0B1C2", "#000000", "#FFFFFF"]
+
+    picker = cp(test)
+    colorsAsDecimal = picker.transformRGBToDecimal()
+    brightestColor: list[int] = picker.getBrightestsColor(colorsAsDecimal)
+        
+    colorsAPI = cr()
+    colorsAPI.requestColors()
+    colorsDF: df = colorsAPI.getFormattedColorsDF()
+        
+    condition = ((colorsDF['r'] == brightestColor[0]) &
+                    (colorsDF['g'] == brightestColor[1]) &
+                    (colorsDF['b'] == brightestColor[2])
+                )
+        
+    color = colorsDF[condition]
+    colorInfo = color.values[0].tolist()
+
+    result = 'The brightest color is: {} (r={}, g={}, b={}) called {}'.format(colorInfo[4],
+                                                                                    colorInfo[1],
+                                                                                    colorInfo[2],
+                                                                                    colorInfo[3],
+                                                                                    colorInfo[0])
+    assert result == "The brightest color is: #FFFFFF (r=255, g=255, b=255) called White"
